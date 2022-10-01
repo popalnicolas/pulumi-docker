@@ -1,5 +1,5 @@
 config:
   aws:region: eu-central-1
   pulumi-docker:htpasswd:
-    secure: AAABAATrgf9DXXzWuCn/kEx+5MrWDsqtYgauczniqgjBDTa0ShxHoQ==
-  pulumi-docker:name: pulumi-docker
+    secure: AAABAOXmD20PAGbTS3NY5/fDPHuhutbJa8M0kwtcw8DvVQ4ef6WJ3Q==
+  pulumi-docker:name: aws-ts-docker

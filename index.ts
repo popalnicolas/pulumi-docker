@@ -1,5 +1,4 @@
 import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 import { getStack } from "@pulumi/pulumi";
 
@@ -19,6 +18,10 @@ const service = new awsx.ecs.FargateService(`${projectName}-td-${getStack()}`, {
                 image: dockerImage/*awsx.ecs.Image.fromPath(`${projectName}-docker-${getStack()}`, "./app")*/,
                 memory: 512,
                 portMappings: [web],
+                // command: [
+                //     `rm /etc/nginx/.htpasswd`,
+                //     `htpasswd -b -c /etc/nginx/.htpasswd admin ${password}`,
+                // ],
                 environment: [
                     {
                         name: "nginx_pass",

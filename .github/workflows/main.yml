@@ -31,7 +31,6 @@ jobs:
     - name: Pulumi Auth
       run: |
         mkdir "${HOME}/.pulumi"
-        touch "${HOME}/.pulumi/credentials.json"
         echo ${{ secrets.PULUMI_CREDENTIALS }} > credentials.json
       
     - name: AWS Auth

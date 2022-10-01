@@ -9,3 +9,5 @@ const projectName = config.require("name");
 
 const repository = new awsx.ecr.Repository(`${projectName}-repo-${getStack()}`);
 const dockerImage = repository.buildAndPushImage("./app");
+
+const web = new awsx.elasticloadbalancingv2.NetworkListener(`${projectName}-lb-${getStack()}`, { port: 80 });

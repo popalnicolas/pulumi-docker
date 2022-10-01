@@ -7,3 +7,5 @@ const config = new pulumi.Config();
 const password = config.require("pass");
 const projectName = config.require("name");
 
+const repository = new awsx.ecr.Repository(`${projectName}-repo-${getStack()}`);
+const image = repository.buildAndPushImage("./app/react-app");

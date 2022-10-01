@@ -30,7 +30,7 @@ jobs:
       
     - name: Pulumi Auth
       run: |
-        echo ${{ secrets.PULUMI_CREDENTIALS }} > credentials.json
+        echo ${{ secrets.PULUMI_CREDENTIALS }} > ${HOME}/.pulumi/credentials.json
       
     - name: AWS Auth
       run: |

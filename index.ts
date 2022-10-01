@@ -4,8 +4,8 @@ import * as awsx from "@pulumi/awsx";
 import { getStack } from "@pulumi/pulumi";
 
 const config = new pulumi.Config();
-const password = config.require("pass");
+const password = config.require("htpasswd");
 const projectName = config.require("name");
 
 const repository = new awsx.ecr.Repository(`${projectName}-repo-${getStack()}`);
-const image = repository.buildAndPushImage("./app/react-app");
+const dockerImage = repository.buildAndPushImage("./app");

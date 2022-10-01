@@ -1,9 +1,9 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
+import { getStack } from "@pulumi/pulumi";
 
-// Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-bucket");
+const config = new pulumi.Config();
+const password = config.require("pass");
+const projectName = config.require("name");
 
-// Export the name of the bucket
-export const bucketName = bucket.id;

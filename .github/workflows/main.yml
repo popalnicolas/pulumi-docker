@@ -29,7 +29,8 @@ jobs:
       run: curl -fsSL https://get.pulumi.com | sh
       
     - name: Pulumi Auth
-      run: echo ${{ secrets.PULUMI_CREDENTIALS }} > credentials.json
+      run: |
+        echo ${{ secrets.PULUMI_CREDENTIALS }} > credentials.json
       
     - name: AWS Auth
       run: |

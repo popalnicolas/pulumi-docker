@@ -1,3 +1,3 @@
 # pulumi-docker
 
-[aws-ts-docker-lb-dev-e7c2ff2-2e04424a2f660873.elb.eu-central-1.amazonaws.com](http://aws-ts-docker-lb-dev-e7c2ff2-2e04424a2f660873.elb.eu-central-1.amazonaws.com)
+[aws-ts-docker-lb-dev-40bc127-2c0a9adf7346194f.elb.eu-central-1.amazonaws.com](http://aws-ts-docker-lb-dev-40bc127-2c0a9adf7346194f.elb.eu-central-1.amazonaws.com)
